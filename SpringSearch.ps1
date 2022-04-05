@@ -5,7 +5,7 @@
    
    #>
 
-   $loc = "Set your file path ***"
+   $loc = (Get-PSDrive -PSProvider FileSystem).Root
 
    Write-Host "[*] Checking For JAVA: "
    try { java.exe -version } catch { Write-Host "Java may not be installed" }
